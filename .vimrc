@@ -1,6 +1,7 @@
 " source $VIMRUNTIME/defaults.vim
 
 set number
+set relativenumber
 syntax enable
 " set cursorline
 set wildmenu
@@ -14,6 +15,9 @@ set clipboard+=unnamed
 set nocompatible
 filetype plugin on
 runtime macros/matchit.vim
+
+" packadd! vimspector
+" let g:vimspector_enable_mappings = 'HUMAN'
 
 let g:tmuxline_preset = {
   \'a'    : '#S',
@@ -70,6 +74,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('kana/vim-operator-user')
   call dein#add('rhysd/vim-clang-format')
   call dein#add('vim-scripts/a.vim')
+	call dein#add('puremourning/vimspector')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
